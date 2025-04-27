@@ -1,3 +1,27 @@
+/* Reset globale */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f4f4f4;
+}
+
+/* Contenitore per le card */
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    width: 100%;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Per schermi fino a 768px (MODIFICATO) */
 @media (max-width: 768px) {
     .navbar {
         display: none;
@@ -5,42 +29,199 @@
 
     .toggle {
         display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        cursor: pointer;
+    }
+
+    /* MANTIENE 3 COLONNE */
+    .cards-container {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+        padding: 15px;
     }
 
     .hero-content {
-        margin-top: 150px;
+        margin-top: 120px;
         padding: 0 20px;
     }
 
     .hero-content h1 {
-        font-size: 2.5em;
+        font-size: 2.2em;
+        text-align: center;
     }
 
     .hero-content p {
-        font-size: 1.2em;
+        font-size: 1.1em;
+        text-align: center;
+        margin-top: 10px;
     }
 
     .navigation ul li a {
-        font-size: 1.5em;
+        font-size: 1.4em;
+        padding: 10px 15px;
     }
 
     .footer-content {
+        display: grid;
         grid-template-columns: 1fr;
         text-align: center;
     }
 
     .social-links {
+        display: flex;
         justify-content: center;
+        gap: 10px;
     }
 
     .order-section,
     .contact-section {
-        padding: 150px 20px 80px;
+        padding: 120px 20px 80px;
+        text-align: center;
+    }
+
+    .navbar-mobile {
+        display: block;
+        text-align: center;
     }
 }
 
+/* Nuovo breakpoint 600px */
+@media (max-width: 600px) {
+    .cards-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Modificato a 480px (anziché 460px) */
+@media (max-width: 480px) {
+    .cards-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Per schermi da 769px in su */
 @media (min-width: 769px) {
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
     .toggle {
         display: none;
+    }
+
+    .navigation ul {
+        display: flex;
+        gap: 20px;
+    }
+
+    .hero-content h1 {
+        font-size: 3.5em;
+    }
+
+    .hero-content p {
+        font-size: 1.5em;
+    }
+
+    .footer-content {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .social-links {
+        justify-content: flex-start;
+    }
+
+    .order-section,
+    .contact-section {
+        padding: 150px 40px;
+    }
+}
+
+/* SEZIONE CARD */
+.sezione {
+    padding: 60px 20px;
+    background: #fff;
+}
+
+.section-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(280px, 1fr));
+    gap: 30px;
+    padding: 20px 0;
+}
+
+.card-item {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.card-item:hover {
+    transform: translateY(-5px);
+}
+
+.card-image img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-bottom: 3px solid #BB0620;
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.card-content h3 {
+    color: #BB0620;
+    margin-bottom: 15px;
+    font-size: 1.4em;
+}
+
+.card-content p {
+    line-height: 1.6;
+    color: #666;
+    font-size: 0.95em;
+}
+
+@media (max-width: 768px) {
+    .cards-container {
+        grid-template-columns: repeat(3, minmax(220px, 1fr));
+        gap: 15px;
+        padding: 15px 0;
+    }
+    
+    .card-image img {
+        height: 180px;
+    }
+    
+    .card-content {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 600px) {
+    .cards-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .cards-container {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    
+    .card-image img {
+        height: 200px;
     }
 }

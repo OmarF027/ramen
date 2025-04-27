@@ -20,7 +20,7 @@
 <body class="menu-page">
     <section class="sezione">
         <div class="container">
-        <h2 style="margin-top: 40px; margin-bottom: 10px;">Il nostro Menù</h2>
+        <h2 style="margin-top: 50px; margin-bottom: 10px;">Il nostro Menù</h2>
         <h3 class="ramen-category" style="margin-top: 10px;">Ramen Classici</h3>
             <div class="grid">
                 <!-- Shoyu Ramen -->

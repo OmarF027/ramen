@@ -32,10 +32,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contatti | 21 OVEN</title>
+    <title>Contatti | GOL D. RAMEN</title>
     <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/base.css">
-    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/hero.css">
+    <link rel="stylesheet" href="css/body_menu.css">
+    <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/components.css">
     <link rel="stylesheet" href="css/animations.css">
     <link rel="stylesheet" href="css/media-queries.css">
@@ -61,6 +64,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     <?php include 'footer.php'; ?>
 
-    <script src="script.js"></script>
+    <!-- MODIFICA SOLO QUESTA PARTE -->
+    <script>
+    // Aggiungi questo listener specifico per la pagina
+    document.querySelector('.close-btn')?.addEventListener('click', toggleMenu);
+    </script>
 </body>
 </html>

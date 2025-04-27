@@ -23,3 +23,83 @@ body {
 .text-center {
     text-align: center;
 }
+
+/* Container principale */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Griglia di base */
+.grid {
+    display: grid;
+    gap: 30px;
+}
+
+/* Responsive griglie */
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1025px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Navbar semplice */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: var(--secondary-color);
+    color: white;
+}
+
+.navbar .logo {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.navigation {
+    display: flex;
+    gap: 20px;
+}
+
+.toggle {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+/* Responsive navbar */
+@media (max-width: 768px) {
+    .navigation {
+        display: none;
+        flex-direction: column;
+        background: var(--secondary-color);
+        position: absolute;
+        top: 70px;
+        right: 20px;
+        padding: 20px;
+        border-radius: 5px;
+    }
+
+    .navigation.active {
+        display: flex;
+    }
+
+    .toggle {
+        display: block;
+    }
+}
