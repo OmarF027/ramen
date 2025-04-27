@@ -1,0 +1,138 @@
+/* SEZIONE MENU - Applicato solo a menu.php */
+body.menu-page .sezione {
+    padding: 80px 20px 120px;
+    background: #fff;
+}
+
+body.menu-page .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+body.menu-page .sezione h2 {
+    text-align: center;
+    font-size: 3em;
+    margin-bottom: 10px; /* Ridotto il margine inferiore per avvicinare a h3 */
+    opacity: 0;
+    animation: titleReveal 1s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
+    animation-delay: 0.2s;
+    color: #BB0620;
+    position: relative;
+    padding-bottom: 20px;
+}
+
+body.menu-page .sezione h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120px;
+    height: 3px;
+    background: #BB0620;
+    border-radius: 2px;
+    display: none !important;
+}
+
+@keyframes titleReveal {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+body.menu-page .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Utilizza la griglia a colonne che si adatta */
+    gap: 20px; /* Distanza tra le card */
+    margin: 50px 0;
+}
+
+body.menu-page .item {
+    background: #fff;
+    border-radius: 16px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 30px;
+    border: 2px solid #BB0620; /* Aggiunta bordatura più visibile */
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box; /* Impedisce che il padding influisca sulla larghezza */
+}
+
+body.menu-page .item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(187, 6, 32, 0.1);
+}
+
+body.menu-page .item h3,
+body.menu-page .item h4 {
+    color: #BB0620;
+    margin: 0 0 15px 0;
+    font-size: 1.6em;
+    font-weight: 600;
+}
+
+body.menu-page .item p {
+    color: #555;
+    line-height: 1.7;
+    margin: 0 0 20px 0;
+    font-size: 0.95em;
+    min-height: auto;
+}
+
+body.menu-page .item div {
+    text-align: center;
+    padding: 15px 0 0;
+    font-size: 1.3em;
+    font-weight: 700;
+    color: #BB0620;
+    border-top: 1px solid rgba(187, 6, 32, 0.1);
+}
+
+/* Stile per le categorie */
+body.menu-page .ramen-category {
+    font-size: 2em;
+    text-align: center;
+    margin: 10px 0 60px; /* Distanza ridotta tra h2 e h3 */
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body.menu-page .ramen-category::before,
+body.menu-page .ramen-category::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(187, 6, 32, 0.3), transparent);
+    margin: 0 20px;
+}
+
+@media (max-width: 768px) {
+    body.menu-page .sezione {
+        padding: 60px 15px 80px;
+    }
+
+    body.menu-page .sezione h2 {
+        font-size: 2.2em;
+        margin-bottom: 10px; /* Ridotto ulteriormente il margine inferiore */
+    }
+
+    body.menu-page .grid {
+        gap: 25px;
+    }
+
+    body.menu-page .item {
+        padding: 20px;
+    }
+
+    body.menu-page .ramen-category {
+        font-size: 1.6em;
+        margin: 10px 0 40px; /* Spazio tra categorie ridotto */
+    }
+}

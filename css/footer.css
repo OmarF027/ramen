@@ -1,0 +1,82 @@
+/* ORDINA */
+.order-section {
+    padding: 180px 50px 100px;
+    background: #fff;
+    text-align: center;
+}
+
+.order-content h1 {
+    font-size: 2.5em;
+    margin: 0 0 20px;
+    color: var(--primary-color);
+}
+
+.delivery-text p {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+/* CONTATTI */
+.contact-section {
+    padding: 180px 50px 100px;
+    background: #f9f9f9;
+    text-align: center;
+}
+
+.contact-container {
+    max-width: 600px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 40px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    text-align: left;
+}
+
+.section-title {
+    color: var(--primary-color);
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 30px;
+}
+
+/* FOOTER */
+footer {
+    background: #000;
+    color: #fff;
+    padding: 40px 20px;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding-bottom: 30px;
+    justify-items: center;
+    align-items: center;
+}
+
+.footer-info h3,
+.footer-info p,
+.social-links a,
+.footer-bottom p,
+.footer-bottom a {
+    color: #fff;
+}
+
+.footer-bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-top: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: 30px;
+}
+
+.footer-bottom p {
+    margin: 5px 0;
+}

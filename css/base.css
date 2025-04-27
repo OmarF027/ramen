@@ -1,0 +1,25 @@
+/* VARIABILI */
+:root {
+    --primary-color: #BB0620;
+    --secondary-color: #2A2A2A;
+    --accent-color: #FFD700;
+}
+
+/* RESET GLOBALI */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    overflow-x: hidden;
+    background: #f4f4f4;
+}
+
+/* Classi base */
+.text-center {
+    text-align: center;
+}
